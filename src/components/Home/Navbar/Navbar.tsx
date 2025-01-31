@@ -1,12 +1,27 @@
+'use client';
 import Link from 'next/link';
 import { TbAirBalloon } from 'react-icons/tb';
 import { navLinks } from '@/constants/constants';
 import { HiBars3BottomRight } from 'react-icons/hi2';
 import { NavbarProps } from '@/types/types';
+import { useEffect, useState } from 'react';
 
 const Navbar: React.FC<NavbarProps> = ({ openNavbar }) => {
+	const [navbarBg, setNavbarBg] = useState<boolean>(false);
+
+	useEffect(() => {
+		const handler = () => {
+			if (window.scrollY >= 90) setNavbarBg(true);
+			if (window.scrollY < 90) setNavbarBg(false);
+		};
+
+		window.addEventListener('scroll', handler);
+
+		return () => window.removeEventListener('scroll', handler);
+	}, []);
+
 	return (
-		<div className="bg-blue-950 transition-all duration-200 h-[12vh] z-[1000] fixed w-full">
+		<div className={`${navbarBg ? 'bg-blue-950 shadow-md' : 'fixed'} transition-all duration-200 h-[12vh] z-[1000] fixed w-full`}>
 			<div className="flex items-center justify-between h-full w-[90%] xl:w-[80%] mx-auto">
 				{/* LOGO */}
 				<div className="flex items-center space-x-2">
