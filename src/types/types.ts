@@ -10,3 +10,17 @@ export interface MobileNavbarProps {
 export interface SectionHeadingProps {
 	heading: string;
 }
+
+export interface HotelCardProps {
+	hotel: IHotel;
+}
+
+export interface IHotel {
+	id: number;
+	image: string;
+	name: string;
+	location: string;
+	rating: number;
+	reviews: string;
+	price: string;
+}
