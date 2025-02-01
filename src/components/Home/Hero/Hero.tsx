@@ -17,7 +17,7 @@ const Hero = () => {
 				<div className="flex items-center justify-center flex-col w-full h-full">
 					<div>
 						<h1 className="text-[25px] mb-4 md:mb-0 text-center md:text-[35px] lg:text-[45px] tracking-[0.7rem] text-white font-bold uppercase">
-							LET&apos;S ENJOT THE NATURE
+							LET&apos;S ENJOY THE NATURE
 						</h1>
 					</div>
 				</div>
