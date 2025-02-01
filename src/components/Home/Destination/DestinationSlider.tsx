@@ -30,7 +30,7 @@ const DestinationSlider = () => {
 			autoPlay={true}
 			autoPlaySpeed={5000}
 			keyBoardControl={true}
-			ssr={false}
+			ssr={true}
 		>
 			{destinationData.map((data) => (
 				<div key={data.id} className="m-3">
