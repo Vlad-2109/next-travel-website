@@ -1,3 +1,5 @@
+import SearchBox from "@/components/Helper/SearchBox";
+
 const Hero = () => {
 	return (
 		<div className="relative w-full h-[120vh] sm:h-[100vh]">
@@ -23,6 +25,8 @@ const Hero = () => {
 							Get the best prices on 2,000,000+ properties, worldwide
 						</p>
 					</div>
+					{/* Search Box */}
+					<SearchBox />
 				</div>
 			</div>
 		</div>
