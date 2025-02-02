@@ -29,3 +29,9 @@ export interface WhyChooseCardProps {
 	image: string;
 	title: string;
 }
+
+export interface NewsCardProps {
+	image: string;
+	title: string;
+	date: string;
+}
