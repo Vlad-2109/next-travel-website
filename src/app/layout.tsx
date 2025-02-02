@@ -1,29 +1,29 @@
 import type { Metadata } from 'next';
-import {Poppins} from 'next/font/google'
+import { Poppins } from 'next/font/google';
 import './globals.css';
 import ResponsiveNavbar from '@/components/Home/Navbar/ResponsiveNavbar';
+import Footer from '@/components/Home/Footer/Footer';
 
 const font = Poppins({
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  subsets: ['latin']
-})
+	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+	subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
 	title: 'Travel For You | Next js 15',
-  description: 'Travel Landing page using next js 15',
-  icons: {
+	description: 'Travel Landing page using next js 15',
+	icons: {
 		icon: '/images/c3.svg',
 	},
 };
 
-export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="en">
-			<body
-				className={`${font.className} antialiased`}
-      >
-        <ResponsiveNavbar />
+			<body className={`${font.className} antialiased`}>
+				<ResponsiveNavbar />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
