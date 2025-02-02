@@ -24,3 +24,8 @@ export interface IHotel {
 	reviews: string;
 	price: string;
 }
+
+export interface WhyChooseCardProps {
+	image: string;
+	title: string;
+}
